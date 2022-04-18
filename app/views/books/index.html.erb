@@ -1,0 +1,33 @@
+<h1>書本列表</h1>
+<%= link_to "上架書本",  new_book_path%>
+<table>
+    <thead>
+        <tr>
+            <td>書名</td>
+            <td>出版日期</td>
+            <td>售價</td>
+            <td>頁數</td>
+            <td>ISBN</td>
+            <td>操作</td>
+        </tr>
+    </thead>
+    <tbody>
+   
+       
+        <tr>
+           <% @books.each do |b| %>
+           <td><%=link_to b.name,book_path(id: b.id)%></td>
+            <td><%= b.date %></td>
+            <td><%= b.price%></td>
+            <td><%= b.pages%></td>
+            <td><%= b.ISBN%></td>
+            <td>
+            <%=link_to "刪除",book_path(id: b.id),method: :delete ,data:{ confirm:"確定嗎？"}%>
+            <%=link_to "編輯",edit_book_path(id: b.id)%>
+            </td>
+        </tr>
+        <% end %>
+      
+    </tbody>
+
+</table>

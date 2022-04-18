@@ -1,0 +1,18 @@
+<%= form_for(book) do |b|%>
+    <%=b.label :name,"書名"%>
+    <%= b.text_field :name %><br>
+
+    <%=b.label :date,"出版日期"%>
+    <%=b.text_field :date%><br>
+
+    <%=b.label :price,"售價"%>
+    <%=b.text_field :price%><br>
+
+    <%=b.label :pages,"頁數"%>
+    <%=b.text_field :pages%><br>
+
+    <%=b.label :ISBN,"ISBN"%>
+    <%=b.text_field :ISBN %><br>
+
+    <%=b.submit%>
+<%end%>

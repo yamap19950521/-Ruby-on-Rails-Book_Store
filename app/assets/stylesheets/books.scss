@@ -1,0 +1,18 @@
+
+.flash{
+    display: flex;
+    background-color: rgb(240, 202, 33);
+    justify-content: space-between;
+    border-radius: 8px;
+    font-size: 30px;
+    padding: 10px;
+    
+}
+.field_with_errors{
+    display: inline-block;
+    label{color: red;}
+    input{ border:1px solid red;}
+}
+
+
+
